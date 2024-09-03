@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".game-btn");
 
 const winSituations = [
   [1, 2, 3],
@@ -12,20 +12,24 @@ const winSituations = [
 ];
 
 var state = "X";
+var gameover= false;
 
-buttons.forEach((e) => {
-    e.addEventListener('click',()=>{
-        if(state==="X"){
+const gamestart = buttons.forEach((e) => {
+    
+     e.addEventListener('click',()=>{
+        if(gameover===false&&state==="X"&&e.innerText===""){
             e.innerText="X";
-            state="0"
-        }else{
+            state=state==="X"?"0":"X"
+        }else if(gameover===false&&e.innerText===""){
+            
             e.innerText="0"
-            state="X"
+            state=state==="X"?"0":"X"
         }
         win();
         
     })
 })
+
 
 const buttonsArr = Array.from(buttons)
 console.log(buttonsArr);
@@ -33,18 +37,33 @@ console.log(buttonsArr);
 function win(){
     for (let i = 0; i < winSituations.length; i++) {
         const [a,b,c] = winSituations[i]
-        if(buttonsArr[a - 1].innerText !== "" && 
+        if(gameover===false&&buttonsArr[a - 1].innerText !== "" && 
             buttonsArr[a - 1].innerText === buttonsArr[b - 1].innerText && 
             buttonsArr[a - 1].innerText === buttonsArr[c - 1].innerText){
-            console.log("win");
-            break;
+                gameover=true
+                if(gameover==true&&buttonsArr[a - 1].innerText==="X"){
+
+                    document.getElementById('h2-header').textContent="game ends X win"
+                    break;
+
+                }else{
+                    document.getElementById('h2-header').textContent="game ends 0 win"
+                        break;
+                }
         }
         
     }
 }
 
-
-    
+function resetTheGame(){
+    buttonsArr.map((e)=>e.innerText="")
+    document.getElementById('h2-header').textContent="game is running ...."
+}
+    document.getElementById('reset-btn').addEventListener('click',()=>{
+        gameover=false;
+        resetTheGame()
+        
+    })
     
 
 
