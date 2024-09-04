@@ -11,7 +11,10 @@ const winSituations = [
   [2, 4, 6],
 ];
 
-var player = "X";
+
+
+
+var player= Math.random()>0.5?"X":"0";
 var gameover = false;
 
 const gamestart = buttons.forEach((e) => {
@@ -68,6 +71,9 @@ function resetTheGame() {
   document.getElementById('h2-header').textContent = "Game start";
   player = "X";
   gameover = false;
+  player= Math.random()>0.5?"X":"0";
+  console.log(player);
+  
 }
 
 document.getElementById('reset-btn').addEventListener('click', () => {
