@@ -18,10 +18,10 @@ var player= Math.random()>0.5?"X":"0";
 var gameover = false;
 
 const gamestart = buttons.forEach((e) => {
-  e.style.background = "white";
+  e.style.background = "grey";
   
   e.addEventListener('click', () => {
-    if (gameover === false && player === "X" && e.style.background === "white") {
+    if (gameover === false && player === "X" && e.style.background === "grey") {
       e.style.backgroundImage = "url('cross2.png')";
       e.style.backgroundSize = 'contain';
       e.style.backgroundRepeat = 'no-repeat';
@@ -29,7 +29,7 @@ const gamestart = buttons.forEach((e) => {
       e.style.backgroundOrigin = "content-box"
       document.getElementById('h2-header').textContent = "Game is running";
       player = "0";
-    } else if (gameover === false && e.style.background === "white") {
+    } else if (gameover === false && e.style.background === "grey") {
       e.style.backgroundImage = "url('o.png')";
       e.style.backgroundSize = 'contain';
       e.style.backgroundRepeat = 'no-repeat';
@@ -49,7 +49,7 @@ function win() {
     const [a, b, c] = winSituations[i];
     if (
       gameover === false &&
-      buttonsArr[a].style.background !== "white" &&
+      buttonsArr[a].style.background !== "grey" &&
       buttonsArr[a].style.backgroundImage === buttonsArr[b].style.backgroundImage &&
       buttonsArr[a].style.backgroundImage === buttonsArr[c].style.backgroundImage
     ) {
@@ -66,7 +66,7 @@ function win() {
 
 function resetTheGame() {
   buttonsArr.forEach((e) => {
-    e.style.background = "white";
+    e.style.background = "grey";
     // e.style.backgroundImage = "";
   });
   document.getElementById('h2-header').textContent = "Game start";
