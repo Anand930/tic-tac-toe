@@ -17,6 +17,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    color: white;
 }
 
 .header {
@@ -50,6 +51,7 @@
 #h2-header {
     margin-bottom: 2vh;
     background: none;
+    color: white;
 }
 
 #reset-btn {
@@ -115,6 +117,7 @@
         padding-top: 20px;
         padding-bottom: 30px;
         margin-bottom: 2vh;
+        
     }
     .buttons-parent{
         padding-top: 0;
