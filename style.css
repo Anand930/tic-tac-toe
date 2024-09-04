@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-.h1-parent{
+.h1-parent {
     width: 100%;
     height: 95vh;
     display: flex;
@@ -14,21 +14,21 @@
     margin: auto;
 }
 
-.header{
+.header {
     padding-top: 50px;
     text-align: center;
 }
 
-.buttons-parent{
+.buttons-parent {
     display: grid;
     height: 48vh;
-    grid-template-columns: repeat(3,0fr);
+    grid-template-columns: repeat(3, 0fr);
     column-gap: 0;
     row-gap: 0;
     margin: 10vh auto;
 }
 
-.game-btn{
+.game-btn {
     all: unset;
     border: 5px solid red;
     width: 10vw;
@@ -38,60 +38,60 @@
     padding: 10px;
 }
 
-#h2-header{
+#h2-header {
     margin-bottom: 2vh;
 }
 
-#reset-btn{
+#reset-btn {
     width: 10vw;
     height: 10vw;
     color: white;
-    background-color: rgba(10, 242, 250, 0.849);
+    background: radial-gradient(circle at 50% 50%, #EE82EE 0%, #36F4ED 100%);
     border-radius: 10px;
     font-size: 28px;
-    border: 1px solid rgb(230, 37, 236);
-    box-shadow:  0 0 0 5px rgb(230, 37, 236);
+    border: 1px solid white;
+    /* box-shadow:  0 0 0 5px rgb(230, 37, 236); */
 }
 
-#reset-btn:hover{
-    color:rgba(10, 242, 250, 0.849);
+#reset-btn:hover {
+    color: rgba(10, 242, 250, 0.849);
     background-color: white;
     transform: scale(1.1);
     transition: smooth 1s ease-in-out;
 }
 
-#btn-1{
+#btn-1 {
     border-left: hidden;
     border-top: hidden;
 }
 
-#btn-2{
+#btn-2 {
     border-top: hidden;
 }
 
-#btn-3{
+#btn-3 {
     border-right: hidden;
     border-top: hidden;
 }
 
-#btn-4{
+#btn-4 {
     border-left: hidden;
 }
 
-#btn-6{
+#btn-6 {
     border-right: hidden;
 }
 
-#btn-7{
+#btn-7 {
     border-left: hidden;
     border-bottom: hidden;
 }
 
-#btn-8{
+#btn-8 {
     border-bottom: hidden;
 }
 
-#btn-9{
+#btn-9 {
     border-right: hidden;
     border-bottom: hidden;
 }
