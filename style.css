@@ -11,17 +11,63 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 10vh;
+    margin: auto;
+}
+
+.header{
+    text-align: center;
 }
 
 .buttons-parent{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    width: 40%;
-    height:  60%;
+    grid-template-columns: repeat(3,0fr);
+    column-gap: 0;
+    row-gap: 0;
+    margin: 10vh auto;
 }
 
 .game-btn{
+    all: unset;
+    border: 5px solid red;
     width: 10vw;
     height: 14vh;
+    background-color: white;
+    caret-color: transparent;
+    padding: 10px;
+}
+
+#btn-1{
+    border-left: hidden;
+    border-top: hidden;
+}
+
+#btn-2{
+    border-top: hidden;
+}
+
+#btn-3{
+    border-right: hidden;
+    border-top: hidden;
+}
+
+#btn-4{
+    border-left: hidden;
+}
+
+#btn-6{
+    border-right: hidden;
+}
+
+#btn-7{
+    border-left: hidden;
+    border-bottom: hidden;
+}
+
+#btn-8{
+    border-bottom: hidden;
+}
+
+#btn-9{
+    border-right: hidden;
+    border-bottom: hidden;
 }
