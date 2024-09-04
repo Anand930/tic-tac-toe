@@ -27,6 +27,7 @@ const gamestart = buttons.forEach((e) => {
       e.style.backgroundRepeat = 'no-repeat';
       e.style.backgroundPosition = 'center';
       e.style.backgroundOrigin = "content-box"
+      document.getElementById('h2-header').textContent = "Game is running";
       player = "0";
     } else if (gameover === false && e.style.background === "white") {
       e.style.backgroundImage = "url('o.png')";

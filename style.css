@@ -6,7 +6,7 @@
 
 .h1-parent{
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,11 +15,13 @@
 }
 
 .header{
+    padding-top: 50px;
     text-align: center;
 }
 
 .buttons-parent{
     display: grid;
+    height: 48vh;
     grid-template-columns: repeat(3,0fr);
     column-gap: 0;
     row-gap: 0;
@@ -34,6 +36,28 @@
     background-color: white;
     caret-color: transparent;
     padding: 10px;
+}
+
+#h2-header{
+    margin-bottom: 2vh;
+}
+
+#reset-btn{
+    width: 10vw;
+    height: 10vw;
+    color: white;
+    background-color: rgba(10, 242, 250, 0.849);
+    border-radius: 10px;
+    font-size: 28px;
+    border: 1px solid rgb(230, 37, 236);
+    box-shadow:  0 0 0 5px rgb(230, 37, 236);
+}
+
+#reset-btn:hover{
+    color:rgba(10, 242, 250, 0.849);
+    background-color: white;
+    transform: scale(1.1);
+    transition: smooth 1s ease-in-out;
 }
 
 #btn-1{
