@@ -95,3 +95,31 @@
     border-right: hidden;
     border-bottom: hidden;
 }
+
+@media (max-width:800px){
+    .header{
+        padding-top: 20px;
+        padding-bottom: 30px;
+        margin-bottom: 2vh;
+    }
+    .buttons-parent{
+        padding-top: 0;
+        margin-top: 0vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .game-btn{
+        width: 24vw;
+    }
+    .h1-parent{
+        justify-content: flex-start;
+    }
+    #reset-btn{
+        width: 150px;
+        height: 60px;
+        margin-top: 20px;
+    }
+    #h2-header{
+        padding-top: 10px;
+    }
+}
